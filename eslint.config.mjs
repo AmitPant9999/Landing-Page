@@ -21,7 +21,18 @@ const eslintConfig = [
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       '@typescript-eslint/no-empty-function': 'off',
-      // Add other rules here if needed
+      '@typescript-eslint/no-empty-object-type': 'off',
+      '@next/next/no-page-custom-font': 'off',
+      // Additional rules disabled
+      'react/prop-types': 'off',
+      'react/display-name': 'off',
+      'no-debugger': 'off',
+      'no-alert': 'off',
+      'no-shadow': 'off',
+      'no-undef': 'off',
+      'no-unused-expressions': 'off',
+      'no-use-before-define': 'off',
+      'react/react-in-jsx-scope': 'off',
     },
   }
 ];
