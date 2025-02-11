@@ -5,7 +5,7 @@ import * as yup from 'yup';
 import { useState } from 'react';
 
 interface Props {
-  anyNonNullishValue: {};
+  anyNonNullishValue: {};//
 }
 
 const schema = yup.object().shape({
