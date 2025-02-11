@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import * as yup from 'yup';
 import { useState } from 'react';
 
 interface Props {
-  anyNonNullishValue: {};//
+  anyNonNullishValue?: object; // Changed to a more specific type
 }
 
 const schema = yup.object().shape({
   email: yup.string().email('Invalid email format').required('Email is required'),
 });
 
-const Hero: React.FC<Props> = ({ anyNonNullishValue }) => {
+const Hero: React.FC<Props> = ({  }) => {
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
 
@@ -24,9 +24,8 @@ const Hero: React.FC<Props> = ({ anyNonNullishValue }) => {
       console.log('Form data is valid:', { email });
       setError(''); 
 
-      
-    } catch (validationError: any) {
-      if (validationError.inner && validationError.inner.length > 0) {
+    } catch (validationError) {
+      if (validationError instanceof yup.ValidationError && validationError.inner && validationError.inner.length > 0) {
         setError(validationError.inner[0].message);
       } else {
         setError("An error occurred during validation.");
