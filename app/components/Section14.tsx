@@ -1,8 +1,8 @@
 'use client'
 import Image from 'next/image';
-import React, { useState, useEffect, Suspense } from 'react';
+import React from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel'; // Import Carousel directly
+import { Carousel } from 'react-responsive-carousel';
 
 const Section14: React.FC = () => {
   const slides = [
@@ -21,21 +21,26 @@ const Section14: React.FC = () => {
       title: "Yet Another Title",
       description: "And here's the third slide's content. Make it interesting!",
     },
-    // ...
+    // ... more slides
   ];
 
-  const handleIndicatorClick = (index: number) => {
-    return (event: React.MouseEvent<HTMLLIElement>) => {
-      event.preventDefault();
-      // Access the carousel instance and call the appropriate method
-      const carouselInstance = document.querySelector('.carousel'); // Or a more specific selector
-      if (carouselInstance) {
-          (carouselInstance as any).goTo(index); // Type assertion if necessary
-      }
-    };
+  const handleIndicatorClick = (index: number) => (event: React.MouseEvent<HTMLLIElement>) => {
+    event.preventDefault();
+    const carouselInstance = document.querySelector('.carousel');
+    if (carouselInstance) {
+      (carouselInstance as any).goTo(index);
+    }
   };
 
-
+  const handleIndicatorKeyDown = (index: number) => (event: React.KeyboardEvent<HTMLLIElement>) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      const carouselInstance = document.querySelector('.carousel');
+      if (carouselInstance) {
+        (carouselInstance as any).goTo(index);
+      }
+    }
+  };
 
   return (
     <section className="bg-white py-20 md:mt-24">
@@ -64,11 +69,18 @@ const Section14: React.FC = () => {
                 <li
                   key={index}
                   onClick={handleIndicatorClick(index)}
-                  onKeyDown={handleIndicatorClick(index)} // Make accessible via keyboard
-                  tabIndex={0} // Make focusable
+                  onKeyDown={handleIndicatorKeyDown(index)}
+                  tabIndex={0}
                   aria-label={`Go to slide ${index + 1}`}
                   className={`indicator ${isSelected ? 'active' : ''}`}
-                  style={{}}
+                  style={{
+                    width: '20px',  // Example styles - customize as needed
+                    height: '20px',
+                    borderRadius: '50%',
+                    backgroundColor: isSelected ? 'blue' : 'gray',
+                    margin: '0 5px',
+                    cursor: 'pointer',
+                  }}
                 />
               )}
             >
@@ -96,7 +108,6 @@ const Section14: React.FC = () => {
               ))}
             </Carousel>
           </div>
-
         </div>
       </div>
     </section>
