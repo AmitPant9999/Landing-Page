@@ -223,11 +223,8 @@ const Section7: React.FC = () => {
               value={formik.values.description}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-<<<<<<< HEAD
-              rows={4} 
-=======
-              rows={4} // Or adjust as needed
->>>>>>> 443ab4589e8a884e55c328e70cb85de93eed1268
+
+              rows={4}
               className={`w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
                 formik.touched.description && formik.errors.description
                   ? "border-red-500"
