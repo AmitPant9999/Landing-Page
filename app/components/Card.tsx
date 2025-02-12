@@ -8,7 +8,7 @@ interface CardProps {
   image: string;
 }
 
-const Card: React.FC<CardProps> = ({ id, content, author, image }) => {
+const Card: React.FC<CardProps> = ({  content, author, image }) => {
   return (
     <div className="bg-white rounded-lg p-6 shadow-md text-gray-800 w-64 h-72 hover:scale-110 transition duration-300">
       <p className="text-sm mb-4">{content}</p>
