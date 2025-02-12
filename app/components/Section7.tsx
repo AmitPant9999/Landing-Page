@@ -214,16 +214,16 @@ const Section7: React.FC = () => {
               htmlFor="description"
               className="block text-gray-700 font-bold mb-2"
             >
-                          Please Describe Your Project          {" "}
+            Please Describe Your Project{" "}
             </label>
-                               {" "}
+            {" "}
             <textarea
               id="description"
               name="description"
               value={formik.values.description}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              rows="4" // Or adjust as needed
+              rows={4} 
               className={`w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
                 formik.touched.description && formik.errors.description
                   ? "border-red-500"
@@ -231,44 +231,42 @@ const Section7: React.FC = () => {
               }`}
               required
             ></textarea>
-                     {" "}
+            {" "}
             {formik.touched.description && formik.errors.description && (
               <div className="text-red-500">{formik.errors.description}</div>
             )}
-                   {" "}
+            {" "}
           </div>
-                 {" "}
+          {" "}
           <div className="md:col-span-2">
-                     {" "}
+            {" "}
             <p className="text-center text-gray-600 text-sm mb-4">
-                          By submitting this form you agree to our            {" "}
+               By submitting this form you agree to our {" "}
+              <a href="#" className="text-blue-500 hover:underline">terms of Service{" "}
+              </a>{" "} and {" "}
               <a href="#" className="text-blue-500 hover:underline">
-                              Terms of Service            {" "}
-              </a>{" "}
-                          and            {" "}
-              <a href="#" className="text-blue-500 hover:underline">
-                              Privacy Policy            {" "}
+               Privacy Policy {" "}
               </a>
-                          .          {" "}
+              {" "}
             </p>
-                     {" "}
+            {" "}
             <div className="text-center">
-                         {" "}
+              {" "}
               <button
                 type="submit"
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-md"
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-md hover:scale-105 hover:-translate-y-2"
               >
-                              Loerum Ipsum →            {" "}
+                 Loerum Ipsum → {" "}
               </button>
-                       {" "}
+              {" "}
             </div>
-                   {" "}
+            {" "}
           </div>
-               {" "}
+        {" "}
         </form>
-                     {" "}
+      {" "}
       </div>
-         {" "}
+      {" "}
     </div>
   );
 };

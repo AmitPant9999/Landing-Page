@@ -48,7 +48,7 @@ export default function Navitems() {
           </a>
 
           {openDropdowns[dropdown.name] && (
-            <div className="absolute left-0 mt-2 w-24 bg-white border border-gray-300 rounded shadow-lg">
+            <div className="absolute left-4 top-4 mt-2 w-24 bg-white border border-gray-300 rounded shadow-lg">
               {dropdown.options.map((option, index) => (
                 <a
                   key={index}

@@ -15,7 +15,7 @@ const Section5: React.FC = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 w-2/3 mx-auto lg:grid-cols-2 mt-14 gap-y-10 ">
-          <div className="w-96 flex flex-col items-center border rounded-xl shadow-black shadow-sm">
+          <div className="w-96 flex flex-col items-center border rounded-xl shadow-black shadow-sm hover:scale-105">
             <img src="/img-8.png" className="w-96 rounded-t-lg object-cover h-40" alt="Image 8" />
             <div className="w-96 translate-x-5">
               <h4 className="font-bold text-lg">Lorem ispum dolor sit amit consecteur</h4>
@@ -32,7 +32,7 @@ const Section5: React.FC = () => {
             </Link>
           </div>
 
-          <div className="w-96 flex flex-col items-center border rounded-lg shadow-black shadow-sm  ">
+          <div className="w-96 flex flex-col items-center border rounded-lg shadow-black shadow-sm  hover:scale-105">
             <img src="/img-9.png" className="w-96 h-40 rounded-t-lg object-cover" alt="Image 9" />
             <div className="w-96 translate-x-5">
               <h4 className="font-bold text-lg">Lorem ispum dolor sit amit consecteur</h4>
@@ -48,7 +48,7 @@ const Section5: React.FC = () => {
               Learn More
             </Link>
           </div>
-          <div className="w-96 flex flex-col items-center border rounded-lg shadow-black shadow-sm">
+          <div className="w-96 flex flex-col items-center border rounded-lg shadow-black shadow-sm hover:scale-105">
             <img src="/img-10.png" className="w-96 h-40 rounded-t-lg object-cover" alt="Image 10" />
             <div className="w-96 translate-x-5">
               <h4 className="font-bold text-lg">Lorem ispum dolor sit amit consecteur</h4>
@@ -64,7 +64,7 @@ const Section5: React.FC = () => {
               Learn More
             </Link>
           </div>
-          <div className="w-96 flex flex-col items-center border rounded-lg shadow-black shadow-sm">
+          <div className="w-96 flex flex-col items-center border rounded-lg shadow-black shadow-sm hover:scale-105">
             <img src="/img-11.png" className="w-96 h-40 rounded-t-lg object-cover" alt="Image 11" />
             <div className="w-96 translate-x-5">
               <h4 className="font-bold text-lg">Lorem ispum dolor sit amit consecteur</h4>
