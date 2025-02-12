@@ -47,7 +47,7 @@ const Section14: React.FC = () => {
       infiniteLoop={true}
       autoPlay={true}
       interval={3000}
-      renderIndicator={(onClickHandler, isSelected, index) => (
+      renderIndicator={(onClickHandler:(index: number) => void, isSelected: boolean, index: number) => (
         <li
           key={index}
           onClick={onClickHandler}
